@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DJ Pape</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <style>
+  
+  body {
+    font-family: 'Graduate', cursive;    
+} 
+
+.smbutton {
+  background:none;
+  border:none;
+  font-size:1em;
+  color:blue;
+}
+
+#thankyoubutton {
+  color: white;
+  background: none;
+  text-decoration: none;
+}
+
+
+#soundcloud {
+  width: 640px;
+}
+
+#para {
+  width:640px;
+}
+
+#form {
+  width: 640px;
+  padding-top: 25px;
+}
+
+.videomargin {
+  padding-top: 25px;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+#linkaanvraag {
+  text-decoration: underline;
+  color: black;
+}
+
+@media only screen and (max-width:767px) {
+  #fotoduo {
+    max-width: 300px;
+  }
+  #soundcloud {
+    max-width: 100%;
+  }
+  #para {
+    max-width: 100%;
+  }
+  #form {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:425px) {
+  .videomargin {
+    padding-top: 0px;
+    margin-top: -150px;
+  }
+  .videocontainer {
+    margin-top: 75px;
+  }
+  #para {
+    padding-bottom: 20px;
+  }
+}
+  
+
+
+@media only screen and (max-width:375px) {
+  .videomargin {
+    padding-top: 0px;
+    margin-top: -180px;
+  }
+  .videocontainer {
+    margin-top: 90px;
+  }
+  #para {
+    padding-bottom: 20px;
+  }
+}
+  
+  
+  
+</style> 
+
+<div class="container">
+  <hr style="margin-top:-1px">
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <img src="paperuigmetlogo.jpg" id="fotoduo">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p class="col-centered text-center" id="para" style="padding-top:25px;">    
+        Welkom op de website van Pape & Ruig! </br></br>
+
+Je vindt hier meer info over ons zoals filmpjes, muziek, biografie en je kunt direct een aanvraag doen voor een optreden!<br/><br/>
+
+Wij zijn Pape & Ruig, een DJ & Sax-duo dat sinds 10 jaar met elkaar optreedt. Ons concept is simpel: veel hitjes met een live saxofonist er doorheen! Onze stijl varieert van top-40, hip hop, dance en nog veel meer, als het maar herkenbaar is en swingt!<br/><br/>
+
+Wanneer je meer info wilt of direct een <a id="linkaanvraag" href="#form">aanvraag</a> wil doen, vul dan je verzoek hieronder even in en we komen er snel bij je op terug!<br/><br/>
+
+Wie weet tot gauw!<br/><br/>
+
+Groeten, 
+Pape & Ruig
+        </p>
+    </div>  
+</div>
+</div>
+
+<div class="container videocontainer">  
+  
+  <div class="col-xs-12 videomargin" style="z-index:3;">    
+    <iframe title="vimeo-player" src="https://player.vimeo.com/video/225068889" width="100%" height="360" frameborder="0" allowfullscreen="true"></iframe>    
+  </div>
+  <div class="col-xs-12 videomargin" style="z-index:2;">
+    <iframe title="vimeo-player" src="https://player.vimeo.com/video/225077715" width="100%" height="360" frameborder="0" allowfullscreen="true"></iframe>
+  </div>
+  <div class="col-xs-12 videomargin" style="z-index:1;">
+    <iframe title="vimeo-player" src="https://player.vimeo.com/video/126731379" width="100%" height="360" frameborder="0" allowfullscreen="true"></iframe>
+  </div>
+  <div class="col-xs-12 videomargin">
+    <iframe title="vimeo-player" src="https://player.vimeo.com/video/39785639" width="100%" height="360" frameborder="0" allowfullscreen="true"></iframe>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="text-center soundcloudcontainer">
+    <iframe id="soundcloud" height="500" auto_play="false" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/657881&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-xs-12">
+  <form action="send_mail.php" class="col-centered" method="post" id="form"> 
+    <div class="form-group">
+        <label for="naam">Naam:</label>
+        <input type="text" class="form-control" name="first_name" id="naam" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" class="form-control" name="email_address" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="bericht">Bericht:</label>
+        <textarea class="form-control" rows="5" name="comments" id="bericht" required></textarea>
+      </div>
+      <div class="form-group text-center">
+          <button class="btn btn-danger" type="submit">Verstuur!</button>
+      </div>
+     </form>
+</div>
+</div>
+  
+    <div class="container">
+    <div class="text-center col-sm-12" style="padding:10px;">
+      <button class="smbutton"><a href="https://www.facebook.com/derkjanpape" target="_blank"><img src="faceblack.png"></a></button>
+      <button class="smbutton"><a href="https://www.instagram.com/derkjanpape/" target="_blank"><img src="instablack.png"></a></button>
+    </div>   
+  </div>
+
+  
+    
+ 
+</body>
+</html>

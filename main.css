@@ -1,0 +1,66 @@
+body {
+    font-family: 'Graduate', cursive;    
+} 
+
+.smbutton {
+  background:none;
+  border:none;
+  font-size:1em;
+  color:blue;
+}
+
+#thankyoubutton {
+  color: white;
+  background: none;
+  text-decoration: none;
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -125px ;
+  margin-top: 25px;  
+}
+
+.centered_2 {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px ;
+  margin-top: 100px;  
+}
+
+.bottomlogo {
+  display: none;
+}
+
+#fotohidden {
+  display: none;
+}
+
+#show_on_mobile {
+  display: none;
+}
+
+@media only screen and (max-width:767px) {
+  .centered_2 {
+    display: none;
+  }
+  .bottomlogo {
+    display: block;
+  }
+  .centered {
+    margin-top: -25px;
+  }
+  #hide_on_mobile {
+    display: none;
+  }
+  #show_on_mobile {
+    display: inline;
+  }
+  #show_on_mobile a img {
+    width: 100px;
+  }
+}
+

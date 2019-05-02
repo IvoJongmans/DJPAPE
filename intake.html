@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Boekingsformulier</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+        
+<div style="height:50px">
+
+</div>
+
+  <div class="container">
+        <div class="col-sm-12 text-center">
+                <img src="logonav.png" alt="#" style="padding-bottom:25px;">
+        </div>
+      <p class="col-sm-12"><b>Uw gegevens:</b></p>
+      <form action="send_boekingsformulier.php" method="post"> 
+            <div class="form-group col-sm-6">
+                <label for="naam">Naam:</label>
+                <input type="text" class="form-control" name="naam" id="naam" required>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" name="email" id="email">
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="straat">Straat:</label>
+                <input type="text" class="form-control" name="straat" id="straat">
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="huisnummer">Huisnummer:</label>
+                <input type="text" class="form-control" name="huisnummer" id="huisnummer">
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="postcode">Postcode:</label>
+                <input type="text" class="form-control" name="postcode" id="postcode">
+            </div>
+            <div class="form-group col-sm-6">
+                    <label for="plaats">Plaats:</label>
+                    <input type="text" class="form-control" name="plaats" id="plaats">
+            </div>
+            <div class="form-group col-sm-12">
+                    <label for="telefoon">Telefoonnummer:</label>
+                    <input type="text" class="form-control" name="telefoon" id="telefoon">
+            </div>    
+            
+            <div class="form-group col-sm-4">
+                    <label for="personen_locatie">Aantal Personen:</label>
+                    <input type="text" class="form-control" name="personen_locatie" id="personen_locatie"> 
+            </div>
+            <div class="form-group col-sm-4">
+                    <label for="soort_locatie">Soort Feest:</label>
+                    <input type="text" class="form-control" name="soort_locatie" id="soort_locatie"> 
+            </div>
+            <div class="form-group col-sm-4">
+                    <label for="locatie_locatie">Locatie Feest:</label>
+                    <input type="text" class="form-control" name="locatie_locatie" id="locatie_locatie"> 
+            </div>            
+
+            <p class="col-sm-12"><b>Gewenste Artiesten</b></p>
+
+            <div class="form-group checkbox col-sm-6">
+                        <label><input type="checkbox" name="artist_list[]" value="DJ" checked>DJ
+                        </label>
+                </div>
+                <div class="form-group checkbox col-sm-6">
+                        <label><input type="checkbox" name="artist_list[]" value="Sax">Sax
+                        </label>
+                </div>
+                <div class="form-group checkbox col-sm-6">
+                        <label><input type="checkbox" name="artist_list[]" value="MC">MC
+                        </label>
+                </div>
+                <div class="form-group checkbox col-sm-6">
+                        <label><input type="checkbox" name="artist_list[]" value="Zangeres">Zangeres
+                        </label>
+                </div>
+
+            <p class="col-sm-12"><b>Benodigde apparatuur</b></p>
+
+            <div class="form-group radio col-sm-4">
+                <label><input type="radio" name="apparatuur" value="Licht- en geluidshow" checked>Licht- en geluidshow</label>
+              </div>
+              <div class="form-group radio col-sm-4">
+                <label><input type="radio" name="apparatuur" value="Alleen lichtshow">Alleen lichtshow</label>
+              </div>
+              <div class="form-group radio col-sm-4">
+                <label><input type="radio" name="apparatuur" value="Alleen geluidshow">Alleen geluidshow</label>
+              </div>
+              <div class="form-group col-sm-12">
+                      <input class="form-control" type="text" name="extra_apparatuur" placeholder="Eventuele extra apparatuur">
+              </div>
+              
+
+              <p class="col-sm-12"><b>Uw Feest en Muziek</b></p>
+
+              <div class="form-group col-sm-12">
+                <textarea class="form-control" rows="5" name="perfecte_avond" placeholder="Hoe ziet uw perfecte feest eruit?"></textarea>
+              </div>
+              <div class="form-group col-sm-12">
+                
+                <textarea class="form-control" rows="5" name="gewenste_muziek" placeholder="Wat zijn uw favoriete muziekgenres?"></textarea>
+            </div>
+            <div class="form-group col-sm-12">
+                
+                <textarea class="form-control" rows="5" name="ongewenste_muziek" placeholder="Welke muziekgenres hoort u liever niet?"></textarea>
+            </div>
+
+            <div class="form-group col-sm-12">
+                <textarea class="form-control" rows="5" name="openingsnummer" placeholder="Welke plaat wilt u om de avond mee te openen of als laatste plaat?"></textarea>
+              </div>
+              <div class="form-group col-sm-12">
+                <textarea class="form-control" rows="5" name="aansluitingen" placeholder="Wat wilt u nog meer doorgeven over de muziek?"></textarea>
+              </div>
+
+              <p class="col-sm-12"><b>Wat is uw favoriete top 10 (artiest + nummer)?</b></p>
+
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer1" placeholder="1.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer2" placeholder="2.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer3" placeholder="3.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer4" placeholder="4.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer5" placeholder="5.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer6" placeholder="6.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer7" placeholder="7.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer8" placeholder="8.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer9" placeholder="9.">
+              </div>
+              <div class="form-group col-sm-6">                
+                <input type="text" class="form-control" name="nummer10" placeholder="10.">
+              </div>
+
+             <div class="form-group col-sm-12">
+                <button class="btn btn-primary" type="submit"><b>Verstuur!</b></button>
+            </div>
+      </form>
+  </div>
+     
+      
+
+    
+ 
+</body>
+</html>
